@@ -77,7 +77,7 @@ km=IntVar()
 
 nombre_usuario="Cuestionario"
 raiz.geometry("280x450+0+0")
-raiz.iconbitmap("rubik.ico")
+raiz.iconbitmap("running/rubik.ico")
 raiz.title('Calculadora Silvia García')
         
 fondo=PhotoImage(file="running/r.png",width=253,height=248)
