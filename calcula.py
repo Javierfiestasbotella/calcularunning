@@ -12,16 +12,22 @@ def nkm2(km):
 
 
 def nkm():
-  s=3600/km.get()/60
-  s=round(s,1)
-  result.set(s)
-  km.set(0)
+  try:
+    s=3600/km.get()/60
+    s=round(s,1)
+    result.set(s)
+    km.set(0)
+  except ZeroDivisionError:
+    messagebox.showinfo(message='No se puede dicivir por cero',title='Atencion!!')
 
 def kmin():
-  s=60/min.get()
-  s=round(s,1)
-  result.set(s)
-  min.set(0)
+  try:
+    s=60/min.get()
+    s=round(s,1)
+    result.set(s)
+    min.set(0)
+  except ZeroDivisionError:
+    messagebox.showinfo(message='No se puede dicivir por cero',title='Atencion!!')
   
 def tabla():
   velocidades=[8,8.5,9,9.5,10,10.5,11,11.5,12,12.5,13,13.5,14,14.5,15,15.5,16,16.5,17,17.5,18,18.5,19,19.5,20,20.5]
@@ -62,11 +68,14 @@ def tabla():
 ''',title='Tabla Referencias')  
 
 def media():
-  v=km.get()/min.get()
-  v=round(v,1)
-  result.set(v)
-  km.set(0)
-  min.set(0)
+  try:
+    v=km.get()/min.get()
+    v=round(v,1)
+    result.set(v)
+    km.set(0)
+    min.set(0)
+  except ZeroDivisionError:
+    messagebox.showinfo(message='No se puede dicivir por cero',title='Atencion!!')
 
 raiz=Tk()
 
